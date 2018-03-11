@@ -1,0 +1,9 @@
+#!/bin/bash
+
+HOST=10.0.99.9
+DEST_BASE=/home/pi/the-queens-guard
+USER=pi
+
+# copy files to the pi
+scp -r ../gate-guard $USER@$HOST:$DEST_BASE/
+
