@@ -6,8 +6,7 @@ when a door is opened.
 ```
 Door opens
   |> raspberry pi reads this via the GPIO pins
-  |> the pi, in python, executes an AWS lambda
-  |> Lambda records this in a data-store
+  |> the pi records this in a DynamoDB
 ```
 
 ENV variables
@@ -22,4 +21,13 @@ aws cloudformation create-stack \
 
     aws cloudformation wait stack-create-complete \
         --stack-name $STACK_NAME
+```
+
+
+## startup on boot
+
+The raspberri pi starts python script using `/etc/rc.local`
+```
+# /etc/rc.local
+sudo /usr/bin/python /home/pi/the-queens-guard/gate-guard/monitor.py &
 ```
