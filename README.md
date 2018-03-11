@@ -1,4 +1,4 @@
-# The Queens Guard ![](./guard.png)
+# The Queens Guard ![guard](./guard.png)
 
 This repository contains scripts and resources for an arduino to record when a door is opened.
 
